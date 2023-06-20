@@ -14,43 +14,41 @@ function Homepage() {
     <div>
       <Navbar />
       <SearchBar />
-
-      <div className="slideshow-container">
-        <Carousel
-          autoPlay
-          infiniteLoop
-          showStatus={false}
-          showThumbs={false}
-          renderArrowPrev={(onClickHandler, hasPrev, label) =>
-            hasPrev && (
-              <button type="button" onClick={onClickHandler} title={label} className="arrow arrow-left">
-                &#60;
-              </button>
-            )
-          }
-          renderArrowNext={(onClickHandler, hasNext, label) =>
-            hasNext && (
-              <button type="button" onClick={onClickHandler} title={label} className="arrow arrow-right">
-                &#62;
-              </button>
-            )
-          }
-        >
-          <div>
-            <img src={image1} alt="Slide 1" className="slide-image" />
-            <p className="legend">Discount on Item 1</p>
-          </div>
-          <div>
-            <img src={image2} alt="Slide 2" className="slide-image" />
-            <p className="legend">Discount on Item 2</p>
-          </div>
-          <div>
-            <img src={image3} alt="Slide 3" className="slide-image" />
-            <p className="legend">Discount on Item 3</p>
-          </div>
-        </Carousel>
+      <div className="homepage-content">
+        <div className="slideshow-container">
+          <Carousel
+            autoPlay
+            infiniteLoop
+            showStatus={false}
+            showThumbs={false}
+            renderArrowPrev={(onClickHandler, hasPrev, label) => (
+              hasPrev && (
+                <button type="button" onClick={onClickHandler} title={label} className="arrow arrow-left">
+                  &#60;
+                </button>
+              )
+            )}
+            renderArrowNext={(onClickHandler, hasNext, label) => (
+              hasNext && (
+                <button type="button" onClick={onClickHandler} title={label} className="arrow arrow-right">
+                  &#62;
+                </button>
+              )
+            )}
+            renderIndicator={() => null} // Remove the indicators
+          >
+            <div>
+              <img src={image1} alt="Slide 1" className="slide-image" />
+            </div>
+            <div>
+              <img src={image2} alt="Slide 2" className="slide-image" />
+            </div>
+            <div>
+              <img src={image3} alt="Slide 3" className="slide-image" />
+            </div>
+          </Carousel>
+        </div>
       </div>
-
       {/* Add the rest of your homepage content here */}
     </div>
   );

@@ -6,7 +6,6 @@
   }
   
   .search-bar input {
-    width: 300px;
     padding: 10px;
     font-size: 16px;
     border-radius: 5px;
@@ -15,15 +14,11 @@
   }
   
   .search-bar button {
-    padding: 10px;
+    padding: 10px 20px;
     font-size: 16px;
     border-radius: 5px;
     background-color: #f1f1f1;
     border: none;
     cursor: pointer;
-  }
-  
-  .search-bar button i {
-    color: #555;
   }
   

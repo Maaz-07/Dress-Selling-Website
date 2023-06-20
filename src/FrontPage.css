@@ -1,0 +1,40 @@
+.container {
+    background-color: #f0f0f0;
+  }
+  
+  .navbar {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: #000000;
+  }
+  
+  .navbar-right ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-right ul li {
+    margin-left: 10px;
+  }
+  
+  .content {
+    display: flex;
+    padding: 20px;
+  }
+  
+  .left {
+    width: 50%;
+    padding-right: 20px;
+  }
+  
+  .right {
+    width: 50%;
+  }
+  
+  /* Additional styles as per your requirement */
+  

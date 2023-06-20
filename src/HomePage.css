@@ -1,21 +1,27 @@
 .slide-image {
-  width: 100%;
+  width: 80%; /* Adjust the width as desired */
   height: auto;
   max-height: 600px; /* Adjust the height as desired */
+  margin: 0 auto; /* Center the images */
 }
 
 .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.8);
-  color: #333;
-  font-size: 24px;
+  background-color: transparent;
+  color: #111111; /* Very dark black color */
+  font-size: 36px;
   border: none;
-  border-radius: 50%;
-  padding: 8px;
+  padding: 0;
   cursor: pointer;
   z-index: 10;
+  width: 60px; /* Adjust the width as desired */
+  height: 60px; /* Adjust the height as desired */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .arrow-left {
@@ -24,4 +30,25 @@
 
 .arrow-right {
   right: 20px;
+}
+
+.arrow:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 2px solid #111111; /* Border color */
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0; /* Initially hidden */
+}
+
+.arrow:hover:before,
+.arrow:focus:before {
+  opacity: 1; /* Show the border on hover or focus */
+}
+
+.carousel-root {
+  margin: 20px; /* Adjust the margin as desired */
 }
