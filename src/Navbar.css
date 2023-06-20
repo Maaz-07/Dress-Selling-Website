@@ -1,100 +1,37 @@
-/* Navbar.css */
-
 .navbar {
-    background-color: darkcyan;
-    color: white;
-    width: 100%;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
-  }
-  
-  .logo h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 0;
-  }
-  
-  .nav-menu {
-    display: flex;
-    align-items: center;
-  }
-  
-  .nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-  }
-  
-  .nav-links li {
-    margin-left: 1rem;
-  }
-  
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .nav-links a:hover {
-    color: lightgray;
-  }
-  
-  .auth-links {
-    margin-left: 1rem;
-  }
-  
-  .hamburger-menu {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-  }
-  
-  .line {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 3px 0;
-  }
-  
-  .open .line {
-    background-color: lightgray;
-  }
-  
-  @media (max-width: 768px) {
-    .container {
-      padding: 1rem 0.5rem;
-    }
-  
-    .nav-links {
-      display: none;
-    }
-  
-    .hamburger-menu {
-      display: flex;
-    }
-  
-    .open .line {
-      background-color: white;
-    }
-  
-    .open .nav-links {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      margin-top: 1rem;
-    }
-  
-    .open .nav-links li {
-      margin: 0;
-    }
-  }  
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.logo img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.navbar-items {
+  margin-left: auto;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-items a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #333;
+}

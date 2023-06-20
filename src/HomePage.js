@@ -1,64 +1,59 @@
-// HomePage.js
-
 import React from 'react';
-import './HomePage.css';
 import Navbar from './Navbar';
-import Footer from './Footer';
+import SearchBar from './SearchBar';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import './HomePage.css'; // Import the CSS file
 
-const HomePage = () => {
+import image1 from './image1.jpg';
+import image2 from './image2.jpg';
+import image3 from './image3.jpg';
+
+function Homepage() {
   return (
-    <div className="homepage">
+    <div>
       <Navbar />
+      <SearchBar />
 
-      <div className="container">
-        <div className="hero">
-          <h1>Welcome to our Dress Selling Website</h1>
-          <p>Find the perfect dress for any occasion.</p>
-        </div>
-
-        <div className="product-grid">
-          <div className="dress-card">
-            <h3>Dress 1</h3>
-            <p>Description of Dress 1</p>
-            <span>$99.99</span>
+      <div className="slideshow-container">
+        <Carousel
+          autoPlay
+          infiniteLoop
+          showStatus={false}
+          showThumbs={false}
+          renderArrowPrev={(onClickHandler, hasPrev, label) =>
+            hasPrev && (
+              <button type="button" onClick={onClickHandler} title={label} className="arrow arrow-left">
+                &#60;
+              </button>
+            )
+          }
+          renderArrowNext={(onClickHandler, hasNext, label) =>
+            hasNext && (
+              <button type="button" onClick={onClickHandler} title={label} className="arrow arrow-right">
+                &#62;
+              </button>
+            )
+          }
+        >
+          <div>
+            <img src={image1} alt="Slide 1" className="slide-image" />
+            <p className="legend">Discount on Item 1</p>
           </div>
-          <div className="dress-card">
-            <h3>Dress 2</h3>
-            <p>Description of Dress 2</p>
-            <span>$129.99</span>
+          <div>
+            <img src={image2} alt="Slide 2" className="slide-image" />
+            <p className="legend">Discount on Item 2</p>
           </div>
-          <div className="dress-card">
-            <h3>Dress 3</h3>
-            <p>Description of Dress 3</p>
-            <span>$79.99</span>
+          <div>
+            <img src={image3} alt="Slide 3" className="slide-image" />
+            <p className="legend">Discount on Item 3</p>
           </div>
-        </div>
-
-        <div className="promotion-banner">
-          <h2>Special Offer!</h2>
-          <p>Get 20% off on selected dresses. Limited time only.</p>
-        </div>
-
-        <div className="testimonials">
-          <h2>What our customers say</h2>
-          <div className="testimonial">
-            <p>"I love the quality and style of their dresses. Highly recommended!"</p>
-            <span>- Happy Customer 1</span>
-          </div>
-          <div className="testimonial">
-            <p>"The best dress shopping experience I've had. Amazing collection!"</p>
-            <span>- Happy Customer 2</span>
-          </div>
-          <div className="testimonial">
-            <p>"Great customer service and prompt delivery. Will buy again!"</p>
-            <span>- Happy Customer 3</span>
-          </div>
-        </div>
+        </Carousel>
       </div>
 
-      <Footer />
+      {/* Add the rest of your homepage content here */}
     </div>
   );
 }
 
-export default HomePage;
+export default Homepage;
